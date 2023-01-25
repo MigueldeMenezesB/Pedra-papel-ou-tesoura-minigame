@@ -32,11 +32,12 @@ while True:
   if (escolha == 'pedra') and (escolhaMaq == 'tesoura') \
     or (escolha == 'papel') and (escolhaMaq == 'pedra') \
       or (escolha == 'tesoura') and (escolhaMaq == 'papel'):
-      print(f'Jogador escolheu {escolha} e a máquina escolheu {escolhaMaq}. Você venceu!')
-      vitoriaJog += 1
+        print(f'Jogador escolheu {escolha} e a máquina escolheu {escolhaMaq}. Você venceu!')
+        vitoriaJog += 1
   
-  if escolha == escolhaMaq:
+  elif escolha == escolhaMaq:
     print(f'Jogador escolheu {escolha} e a máquina escolheu {escolhaMaq}. Empatou!')
+
   else:
     print(f'Jogador escolheu {escolha} e a máquina escolheu {escolhaMaq}. Você perdeu!')
     vitoriaMaq += 1
@@ -46,9 +47,9 @@ while True:
   print(f'Pontuação Máquina: {vitoriaMaq}')
 
   exec = input('\ncontinuar?[S/N]: ')
-  if exec in ['Ss']:
+  if exec in ['S', 's']:
     pass
-  elif exec in ['Nn']:
+  elif exec in ['N', 'n']:
     break
   else:
     break
